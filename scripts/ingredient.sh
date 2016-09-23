@@ -14,8 +14,7 @@ curl --include --request PATCH http://localhost:3000/ingredients/1 \
   --header "Content-Type: application/json" \
   --data '{
     "ingredient": {
-      "toxicity": "toxic"
-
+      "toxicity": "non-toxic"
     }
   }'
   # "name": "an@example.email",

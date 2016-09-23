@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :ingredients, except: [:new, :edit]
   get '/ingredients', to: 'ingredients#index'
   get '/ingredient/:id', to: 'ingredient#index'
-  patch '/ingredient/:id', to: 'ingredient#changeingredient'
+  patch '/ingredient/:id', to: 'ingredient#update'
 
 end
