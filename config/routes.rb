@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   get '/ingredient/:id', to: 'ingredient#index'
   patch '/ingredient/:id', to: 'ingredient#update'
   post '/ingredients', to: 'ingredients#create'
-  delete '/ingredient/:id', to: 'ingredient#delete'
+  delete '/ingredient/:id', to: 'ingredient#destroy'
 
 end
