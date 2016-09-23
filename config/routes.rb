@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get '/ingredients', to: 'ingredients#index'
   get '/ingredient/:id', to: 'ingredient#index'
   patch '/ingredient/:id', to: 'ingredient#update'
+  post '/ingredients', to: 'ingredients#create'
 
 end

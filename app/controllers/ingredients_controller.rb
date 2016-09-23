@@ -7,6 +7,16 @@ class IngredientsController < ApplicationController
     render json: @ingredients
   end
 
+  def create
+    @ingredient = Ingredient.create(ingredient_params)
+
+    if @example.save
+      render json: @ingredient, status: :created, location: @ingredient
+    else
+      render json: @ingredient.errors, status: :unprocessable_entity
+    end
+  end
+
   def show
     render json: Ingredient.find(params[:id])
   end
