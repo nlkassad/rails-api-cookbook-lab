@@ -2,7 +2,18 @@
 
 # create record
 
-ingredient1 = Ingredient.create([{ name: 'Potatoes', std_measure: 'bushel', color: 'white', toxicity: 'Bad'}])
+#ingredient2 = Ingredient.create([{ name: 'Potatoes', std_measure: 'bushel', color: 'white', toxicity: 'Bad'}])
+curl --include --request POST http://localhost:3000/ingredients \
+  --header "Content-Type: application/json" \
+  --data '{
+    "ingredient": {
+      "name": "Poison",
+      "std_measure": "drop",
+      "color": "black",
+      "toxicity": "very"
+    }
+  }'
+
 
 # get ingredient
 
@@ -17,8 +28,5 @@ curl --include --request PATCH http://localhost:3000/ingredients/1 \
       "toxicity": "non-toxic"
     }
   }'
-  # "name": "an@example.email",
-  # "std_measure": "an example password",
-  # "color": "an example password"
 
 # delete ingredient
